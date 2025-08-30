@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "0xproto";
+    src: url("fonts/0xProtoNerdFont-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0d0d0d;
+    font-family: "0xproto", monospace;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+#aboutList {
+    max-width: 420px;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.5;
+    font-size: 1.1em;
+    padding-right: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Hidden class for fade functionality */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Styles for specific elements */
+
+#mainTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    margin: 0;
+}
+
+#inputTitle {
+    position: absolute;
+    top: 90px;
+    left: 170px;
+    color: #fff;
+    opacity: 0;
+}
+
+#aboutList {
+    color: #fff;
+    position: absolute;
+    top: 160px;
+    left: 90px;
+    margin: 0;
+    opacity: 0;
+}
+
+#socialMedias {
+    color: #fff;
+    position: absolute;
+    top: 750px;
+    left: 220px;
+    margin: 0;
+    opacity: 0;
+}
+
+#ytLink {
+    position: absolute;
+    top: 820px;
+    left: 100px;
+    opacity: 0;
+}
+
+#instaLink {
+    position: absolute;
+    top: 820px;
+    left: 190px;
+    opacity: 0;
+}
+
+#ytLink img,
+#instaLink img {
+    width: 72px;
+    height: 50px;
+    border-radius: 9px;
+}
+
+#instaLink img {
+    width: 50px;
+    height: 50px;
+}
+
+a[href="https://livepix.gg/murasxz"] {
+    position: fixed;
+    left: 12px;
+    bottom: 8px;
+    font-size: 0.85em;
+    color: #fff;
+    opacity: 0.9;
+    text-decoration: underline;
+    z-index: 10;
+    text-shadow: 1px 1px 6px #000, 0 0 2px #000000;
+}

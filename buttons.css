@@ -1,0 +1,52 @@
+.button {
+    background-color: #000000;
+    /* cinza */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 45px;
+    font-size: 16px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 0.4s;
+    font-family: '0xproto', monospace;
+}
+
+.button:hover {
+    background-color: #e6e3e318;
+    /* Green */
+    color: white;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#backBtn {
+    display: none;
+    /* começa escondido */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000000;
+    /* black */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 20;
+    /* garante que fique acima de tudo */
+    transition-duration: 0.4s;
+}
+
+#backBtn:hover {
+    background-color: #e6e3e318;
+}
