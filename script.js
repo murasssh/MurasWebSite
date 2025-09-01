@@ -3,7 +3,7 @@ const button = document.querySelector(".button");
 button.addEventListener("click", () => {
     const clickSound = new Audio("fonts/click.mp3");
     clickSound.volume = 0.5; // diminui para 50%
-    clickSound.currentTime = 0; // garante que comece do início
+    clickSound.currentTime = 0.1; // garante que comece do início
     clickSound.play();
 });
 
