@@ -1,20 +1,24 @@
+// Seleciona todos os elementos uma única vez
 const button = document.querySelector(".button");
-
-button.addEventListener("click", () => {
-    const clickSound = new Audio("fonts/click.mp3");
-    clickSound.volume = 0.5; // diminui para 50%
-    clickSound.currentTime = 0.1; // garante que comece do início
-    clickSound.play();
-});
-
-const btn = document.getElementById("fadeBtn");
+const fadeBtn = document.getElementById("fadeBtn");
 const mainTitle = document.getElementById("mainTitle");
 const inputTitle = document.getElementById("inputTitle");
 const aboutList = document.getElementById("aboutList");
 const socialMedias = document.getElementById("socialMedias");
 const ytLink = document.getElementById("ytLink");
 const instaLink = document.getElementById("instaLink");
+const backBtn = document.getElementById("backBtn");
+const links = document.querySelectorAll("a");
 
+// Função para reproduzir o som de clique
+function playClickSound() {
+    const clickSound = new Audio("fonts/click.mp3");
+    clickSound.volume = 0.5;
+    clickSound.currentTime = 0;
+    clickSound.play();
+}
+
+// Funções de fade (mantidas as originais)
 function fadeOut(element, callback) {
     element.style.transition = "opacity 1.5s";
     element.style.opacity = 0;
@@ -33,53 +37,39 @@ function fadeIn(element) {
     }, 10);
 }
 
-btn.onclick = function() {
-    fadeOut(btn);
+// Evento de clique para o botão principal "Clique Aqui"
+fadeBtn.addEventListener("click", () => {
+    playClickSound();
+
+    fadeOut(fadeBtn);
     fadeOut(mainTitle, () => {
         fadeIn(inputTitle);
         fadeIn(aboutList);
         fadeIn(socialMedias);
         fadeIn(ytLink);
         fadeIn(instaLink);
+        fadeIn(backBtn); // Mostra o botão "Voltar"
     });
-};
-const backBtn = document.getElementById("backBtn");
+});
 
-btn.onclick = function() {
-    fadeOut(btn);
-    fadeOut(mainTitle, () => {
-        fadeIn(inputTitle);
-        fadeIn(aboutList);
-        fadeIn(socialMedias);
-        fadeIn(ytLink);
-        fadeIn(instaLink);
-        fadeIn(backBtn); // mostra o botão de voltar
-    });
-};
-
+// Evento de clique para o botão "Voltar"
 backBtn.addEventListener("click", () => {
-    const clickSound = new Audio("fonts/click.mp3");
-    clickSound.volume = 0.5;
-    clickSound.currentTime = 0;
-    clickSound.play();
+    playClickSound();
 
     fadeOut(inputTitle);
     fadeOut(aboutList);
     fadeOut(socialMedias);
     fadeOut(ytLink);
     fadeOut(instaLink);
-    fadeOut(backBtn, () => {
+    fadeOut(backBtn, () => { // Esconde o botão "Voltar" depois do fade-out
         fadeIn(mainTitle);
-        fadeIn(btn);
+        fadeIn(fadeBtn);
     });
 });
-// Add click sound to all links
-const links = document.querySelectorAll("a");
+
+// Adiciona som de clique a todos os links
 links.forEach(link => {
     link.addEventListener("click", (event) => {
-        const clickSound = new Audio("fonts/click.mp3");
-        clickSound.volume = 0.5;
-        clickSound.currentTime = 0;
-        clickSound.play();
+        playClickSound();
     });
 });
